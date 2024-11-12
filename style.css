@@ -2,16 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    margin: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: rgb(7, 7, 7);
 }
 
 body {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    align-content: center;
 }
 .container {
-    width: 30%;
+    width: 35%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -21,44 +25,57 @@ body {
         "articles articles right-side"
         "footer footer footer";
     background-color: rgb(24, 22, 22);
+    border: #000 solid 1rem;
 }
 .header {
-    height: 6rem;
+    height: 8rem;
     grid-area: header;
-    background-color: rgb(219, 25, 25);
-    margin: 1rem;
+    background-color: rgb(49, 102, 201);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .navbar {
-    height: 6rem;
+    height: 8rem;
     grid-area: navbar;
-    background-color: rgb(219, 25, 25);
-    margin: 1rem;
+    background-color: rgb(35, 163, 157);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .section {
-    height: 6rem;
+    height: 12rem;
     grid-area: section;
-    background-color: rgb(219, 25, 25);
-    margin: 1rem;
+    background-color: rgb(255, 208, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .articles {
-    height: 6rem;
+    height: 12rem;
     grid-area: articles;
-    background-color: rgb(219, 25, 25);
-    margin: 1rem;
+    background-color: rgb(214, 106, 73);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .right-side {
-    height: 14rem;
+    height: 25rem;
     grid-area: right-side;
-    background-color: rgb(219, 25, 25);
-    margin: 1rem;
+    background-color: rgb(231, 223, 223);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 } 
 
 .footer {
-    height: 6rem;
+    height: 8rem;
     grid-area: footer;
-    background-color: rgb(219, 25, 25);
-    margin: 1rem;    
+    background-color: rgb(49, 102, 201);    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
