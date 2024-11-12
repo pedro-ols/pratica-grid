@@ -16,18 +16,25 @@ body {
 .container {
     width: 35%;
     display: grid;
+    grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    grid-template-areas:
+        "header header header header header header"
+        "navbar navbar navbar navbar navbar navbar"
+        "section section section section section section"
+        "articles articles articles articles articles articles"
+        "aside aside aside aside aside aside"
+        "footer footer footer footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
         "header header header"
         "navbar navbar navbar"
-        "section section right-side"
-        "articles articles right-side"
+        "section section aside"
+        "articles articles aside"
         "footer footer footer";
     background-color: rgb(24, 22, 22);
     border: rgb(24, 22, 22) solid 0.5rem;
 }
 .header {
-    height: 5rem;
     grid-area: header;
     background-color: rgb(49, 102, 201);
     display: flex;
@@ -35,7 +42,6 @@ body {
     justify-content: center;
 }
 .navbar {
-    height: 5rem;
     grid-area: navbar;
     background-color: rgb(35, 163, 157);
     display: flex;
@@ -44,7 +50,6 @@ body {
 }
 
 .section {
-    height: 8rem;
     grid-area: section;
     background-color: rgb(255, 208, 0);
     display: flex;
@@ -53,7 +58,6 @@ body {
 }
 
 .articles {
-    height: 8rem;
     grid-area: articles;
     background-color: rgb(214, 106, 73);
     display: flex;
@@ -61,9 +65,8 @@ body {
     justify-content: center;
 }
 
-.right-side {
-    height: 17rem;
-    grid-area: right-side;
+.aside {
+    grid-area: aside;
     background-color: rgb(231, 223, 223);
     display: flex;
     align-items: center;
@@ -71,10 +74,41 @@ body {
 } 
 
 .footer {
-    height: 5rem;
     grid-area: footer;
     background-color: rgb(49, 102, 201);    
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.right-side-h1{
+    transform: rotate(90deg);
+}
+@media (max-width: 1000px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header"
+        "navbar"
+        "section"
+        "articles"
+        "footer";
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    grid-template-areas:
+        "header header header header header header"
+        "navbar navbar navbar navbar navbar navbar"
+        "section section section section section section"
+        "articles articles articles articles articles articles"
+        "aside aside aside aside aside aside"
+        "footer footer footer footer footer footer";
+    }
+    .right-side-h1{
+        transform: rotate(0deg);
+    }
+    
+}
+
+
+    
+
+
